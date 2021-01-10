@@ -8,11 +8,16 @@
 - 1차시 : OpenCV 개요 및 OpenCV Face Detection
 - 2차시 : OpenCV Human Detection using by HOG
 - 3차시 : OpenCV Perspective Transform
+- 4차시 : OpenCV Object Tracking
 
 아직 수업 중 인지라 수업이 끝난 후에 작성해서 올릴 예정
 
 # 수업 자료
+## 발표 자료
 __오붕시붕이__ 폴더 안에 가면 뭐 있긴 하다. 근데 .key 파일로 되어 있는데 암호화 파일이 아니라 Keynote 파일이다. PDF와 PowerPoint 파일로 변환해서 올려줄 터이니 좀 기다려라..
+
+## 실습 자료
+__Go_for_it__ 이거 같은 경우에는 실제 수업을 진행하면서 사용했던 코드, __Ready_for_it__ 같은 경우에는 이제 수업 전에 미리 직접 진행을 해보면서 준비를 하는 것. 이것 또한 수시로 수정이 되면서 올라갈 예정.
 
 # Can I use it?
 사용할 의사가 있다면 사용 전에 Issue에 미리 말을 해주고 사용해주길 바란다. 맘대로 사용 되는 건 조금 불편하다.
