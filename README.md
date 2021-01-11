@@ -9,6 +9,7 @@
 - 2차시 : OpenCV Human Detection using by HOG
 - 3차시 : OpenCV Perspective Transform
 - 4차시 : OpenCV Object Tracking
+- 5차시 : 뭐하지
 
 아직 수업 중 인지라 수업이 끝난 후에 작성해서 올릴 예정
 
