@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from skimage.feature import hog
 from skimage import data, exposure
 
-image = plt.imread('cherrybomb.png')
+image = plt.imread('tyler.png')
 
 fd, hog_image = hog(image, orientations=8, pixels_per_cell=(16,16), 
         cells_per_block=(1,1), visualize=True, multichannel=True)
