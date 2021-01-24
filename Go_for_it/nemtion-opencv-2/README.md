@@ -2,6 +2,7 @@
 ## What is HOG?
 HOG는 ***Histogram of Oriented Gradients***의 약자로 한국어로 직역을 하면 ***기울임 강조 히스토그램(?)*** 이라고 할 수 있을거 같다. 사실 명확히 말하면 HOG **Feature Descriptor** 라는 말이 붙는게 맞다. 이에 대한 이유는 사실 2차시 수업 자료에 작성을 해두기는 했다. Feature Descriptor 특징 설명자(?) 의 종류는 HOG 외에도 굉장히 다양하면 특징을 잡는 하나의 기술이라는 것 중에 하나이기 때문이다. 뭐 아무튼 작동 원리를 설명해주면서 이 코드에 대한 설명을 하겠다.
 
+# My Code
 ## plot_hog.py
 해당 파일에 있는 코드의 역할은 HOG Feature Descriptor를 통해 사람을 인식하기 이전에 먼저 사람의 모습을 전지적 CV 관점에서 보기 위한 코드이다. 쉽게 말해 이해를 돕기 위한 코드라고 하면 되게 쉽다.
 
@@ -127,7 +128,7 @@ image = imutils.resize(image, width=min(400, image.shape[1]))
 
 위와 같은 방식으로 인식을 할 때 이에 크기를 몇으로 해줄 것인지를 정해주는 것이다. 즉, winStride의 크기가 크면 속도는 빨라지지만 인식율를 떨어지고 크키가 작으면 속도는 느려지지만 인식율은 높아진다고 할 수 있다. 이것 또한 확답이 어려운 것이 어떤 사진을 하냐에 따라 다른데 이 부분은 뒤에서 다루기로.
 
-padding은 필수는 아니지만 적당히 padding을 추가해주면 객체 인식율을 어느정도 올릴수 있다고 한다. <a href="https://hal.inria.fr/inria-00548512/document">Dalal and Triggs in their 2005 CVPR paper</a>
+padding은 필수는 아니지만 적당히 padding을 추가해주면 객체 인식율을 어느정도 올릴수 있다고 한다. **<a href="https://hal.inria.fr/inria-00548512/document">Dalal and Triggs in their 2005 CVPR paper</a>**
 
 일반적으로는 (8, 8), (16,16), (24, 24), (32, 32)의 패딩을 사용한다. 이는 각자 직접 실행을 해보면서 적당한 값을 찾는 것이 좋다.
 
@@ -135,6 +136,8 @@ scale 파라미터도 필수는 아니다. 하지만 나름 중요한 내용이�
 <div align="center">
 
 ![scale parameter example](https://www.pyimagesearch.com/wp-content/uploads/2015/03/pyramid_example.png)
+
+*Image from __pyimagesearch__*
 
 </div>
 
@@ -158,3 +161,7 @@ regions의 좌표들을 통해서 총 4개의 점을 얻어낸다. 각 좌표가
 HOG Descriptor를 이제는 활용하는 케이스는 거의 못 봤다. 대신에 왜 이 기술을 알아야 하는지 묻는다면 HOG가 이제는 ***LEGACY*** 라고 불릴 정도로 기술의 방법과 작동 원리 만큼은 확실히 좋다. 
 
 또한 앞으로 나오고 있는 Feature Descrpitor 들 또한 HOG를 조상(?)처럼 여기는 경우가 종종 있기 때문이다. 그러니 이런 기술의 작동 원리를 알아두면 다른 기술을 공부하는데에 이해하기가 쉽다.
+
+추가적으로 OpenCV에 대한 공부를 좀 더 심도 있게 하고 싶다면 개인적으로는 영문을 직접 해석해가면서 읽는걸 추천한다. 물론 한국어로 된 좋은 문서들도 많다. 하지만 아직 OpenCV 알고리즘의 작동 원리나 기술에 대한 내용은 아직 한국어보다는 영어가 많은건 사실이다. 그로 인해 나도 도움이 될지도 모르겠지만 이런식으로 계속 이런 글을 작성해가는거다.
+
+나에게는 되게 오랜만에 하는 간단한 내용이지라도 누구에게는 처음보는 코드가 될 수 있기 때문이다. 간단하지만 그 안에는 굉장히 많은 일들이 돌아가는 OpenCV 코드를 보면서 작동 원리를 꼭 알아 갔으면 좋겠다는 작은 나의 소신이다.
